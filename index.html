@@ -88,33 +88,55 @@
 			</div>	
 		</div>
 	</div>
+        <div class="sequence-next">NEXT!!!!!!</div>
 	<div id="sequence">
 		<ul class="sequence-canvas">
         <li class="animate-in">
-            <div class="info1">
-                <p>Frame 1 information</p>
-            </div>
+			<div class="info3"><img class="responsive" src="assets/images/transparent4.jpg" alt=""></div>
+			<div class="text"><h1>Hello world</h1></div>
         </li>
-        <li class="animate-in">
-            <div class="info2">
-                <p>Frame 2 information</p>
-            </div>
+<!--         <li>
+			<div class="info1"><img src="assets/images/arrow2.jpg" alt=""></div>
         </li>
-        <li class="animate-in">
-            <div class="info3">
-                <p>Frame 3 information</p>
-            </div>
+        <li>
+			<div class="info2"><img src="assets/images/eye3.jpg" alt=""></div>
+        </li> -->
+        <li>
+            <div class="info4" style="background: url(assets/images/handbg.png)"></div>
+            <div class="hand"><img class="responsive" src="assets/images/hand.png" alt=""></div>
         </li>
     </ul>
 	</div>
+<br>
+<br><br>
 
 <script type="text/javascript"> 
-    $(document).ready(function() {
-        var sequence = $("#sequence").sequence({
-            autoPlay: true,
-            // autoPlayDelay: 1000
-        }).data("sequence");
-    });
+
+$(document).ready(function() {
+	var sequence = $("#sequence").sequence({
+	    autoPlay: true,
+	    autoPlayDelay: 500,
+	    nextButton: true
+	}).data("sequence");
+
+	$('#sequence').height(Math.min.apply(Math, $('#sequence img').map(function() {
+			console.dir($('#sequence').height());
+			console.dir(this);
+			console.dir(this.clientHeight);
+			return this.clientHeight;
+	})));
+	// $(window).resize(function() {
+	// 	console.log('resize');
+	// 	var minH = minH();
+	// 	console.log(minH);
+	// 	$('#sequence').height(minH);
+	// });
+
+
+	//$('#sequence').height(minH());
+	console.log($('#sequence').height());
+});
+
 </script>
 
 </div>
