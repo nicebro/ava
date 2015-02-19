@@ -88,53 +88,60 @@
 			</div>	
 		</div>
 	</div>
-        <div class="sequence-next">NEXT!!!!!!</div>
+        
 	<div id="sequence">
 		<ul class="sequence-canvas">
-        <li class="animate-in">
-			<div class="info3"><img class="responsive" src="assets/images/transparent4.jpg" alt=""></div>
-			<div class="text"><h1>Hello world</h1></div>
-        </li>
-<!--         <li>
-			<div class="info1"><img src="assets/images/arrow2.jpg" alt=""></div>
-        </li>
-        <li>
-			<div class="info2"><img src="assets/images/eye3.jpg" alt=""></div>
-        </li> -->
-        <li>
-            <div class="info4" style="background: url(assets/images/handbg.png)"></div>
-            <div class="hand"><img class="responsive" src="assets/images/hand.png" alt=""></div>
-        </li>
-    </ul>
+	        <li class="animate-in">
+				<div class="slide-1"><img class="responsive" src="assets/images/transparent4.jpg" alt=""></div>
+				<div class="slide-1-text-1">Clarity at Work.</div>
+				<div class="slide-1-text-2">Highly Efficient and Transparent .</div>
+				<div class="slide-1-text-3"><span>As a small firm, we are nimble and efficient. With a commitment to advancements in technology and project management principles, Noble Law works to quickly and efficiently meet our clients' needs, often outpacing our big law counterparts.</span></div>
+				<div class="slide-1-text-4"><a class="button large default" href="http://thenoblelaw.com/employment-law-attorneys/" target="_blank">LEARN MORE</a></div>
+	        </li>
+	        <li>
+				<div class="slide-2"><img class="responsive" src="assets/images/arrow2.jpg" alt=""></div>
+				<div class="slide-1-text-1">Clarity at Work.</div>
+	        </li>
+	        <li>
+				<div class="slide-3"><img class="responsive" src="assets/images/eye3.jpg" alt=""></div>
+	        </li>
+	        <li>
+	            <div class="slide-4" style="background-image: url(assets/images/handbg.png)"></div>
+	            <div class="slide-4-image-1"><img class="responsive" src="assets/images/hand.png" alt=""></div>
+	        </li>
+	        <div class="sequence-next sequence-button"></div>
+	        <div class="sequence-prev sequence-button"></div>
+    	</ul>
 	</div>
 <br>
-<br><br>
 
 <script type="text/javascript"> 
 
-$(document).ready(function() {
-	var sequence = $("#sequence").sequence({
-	    autoPlay: true,
-	    autoPlayDelay: 500,
-	    nextButton: true
-	}).data("sequence");
-
-	$('#sequence').height(Math.min.apply(Math, $('#sequence img').map(function() {
-			console.dir($('#sequence').height());
-			console.dir(this);
-			console.dir(this.clientHeight);
-			return this.clientHeight;
-	})));
-	// $(window).resize(function() {
-	// 	console.log('resize');
-	// 	var minH = minH();
-	// 	console.log(minH);
-	// 	$('#sequence').height(minH);
-	// });
+var sequence = $("#sequence").sequence({
+    //autoPlay: true,
+    autoPlayDelay: 500,
+    nextButton: true,
+    prevButton: true,
+}).data("sequence");
 
 
-	//$('#sequence').height(minH());
-	console.log($('#sequence').height());
+$(window).resize(function() {
+	$('#sequence').height(Math.min.apply(Math, 
+		$('#sequence img').map(function() {
+			return this.height;
+		})
+	));
+});
+var total = $('#sequence img').length;
+$('#sequence img').load(function(e) {
+	total--;
+	if (total < 1) {
+		$('#sequence').height(Math.min.apply(Math, 
+			$('#sequence img').map(function() {
+				return this.height;
+			}).get()
+		));
+	}
 });
 
 </script>
