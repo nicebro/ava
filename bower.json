@@ -2,6 +2,7 @@
   "name": "Boilerplate",
   "dependencies": {
     "sequence": "git@github.com:IanLunn/Sequence.git#master",
-    "jquery": "1.*"
+    "jquery": "1.*",
+    "normalize.css": "~3.0.2"
   }
 }

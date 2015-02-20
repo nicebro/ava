@@ -46,7 +46,10 @@ gulp.task('copy-variables', function() {
 });
 
 gulp.task('css', function() {  
-  return gulp.src(paths.dev.less + 'styles.less')
+  return gulp.src([
+    paths.dev.less + 'styles.less',
+    paths.assets.vendor + 'normalize.css/normalize.css'
+    ])
     .pipe(less()).on('error', catchError)
     .pipe(gulp.dest(paths.assets.css)) 
     //.pipe(minify({keepSpecialComments:0}))
