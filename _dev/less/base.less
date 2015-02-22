@@ -31,14 +31,9 @@ img.responsive {
     margin-left: 15px;
 }
 
-.row {
+.container {
     margin: 0 auto;
     max-width: 940px;
-    &:after {
-        content: "";
-        display: block;
-        clear: both;
-    }
 }
 
 .top-header {
@@ -63,7 +58,7 @@ img.responsive {
     display: inline-block;
     text-decoration: none;
     background: #AAD75B;
-    color: #54770f !important;
+    color: #54770f;
     background-image: linear-gradient(top, #D1E990 0%, #AAD75B 100%);
     background-image: -o-linear-gradient(top, #D1E990 0%, #AAD75B 100%);
     background-image: -moz-linear-gradient(top, #D1E990 0%, #AAD75B 100%);
@@ -74,7 +69,7 @@ img.responsive {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D1E990', endColorstr='#AAD75B');
     &:hover {
         background: #D1E990;
-        color: #54770f !important;
+        color: #54770f;
         background-image: linear-gradient(top, #AAD75B 0%, #D1E990 100%);
         background-image: -o-linear-gradient(top, #AAD75B 0%, #D1E990 100%);
         background-image: -moz-linear-gradient(top, #AAD75B 0%, #D1E990 100%);
@@ -104,5 +99,132 @@ img.responsive {
 
 #content {
     padding: 55px 10px 45px;
+    h1 {
+        font-weight: normal;
+    }
+    p {
+        margin: 0 0 20px 0;
+    }
+    .employee {
+        margin: 0 0 40px 0;
+    }
+    .heading {
+        font-size: 18px;
+        line-height: 35px;
+        .icon, .title {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .icon {
+            margin: 0 10px 0 0;
+        }
+    }
+    .more {
+        margin-top: 18px;
+        display: block;
+        overflow: hidden;
+        a {
+            text-decoration: none;
+            float: right;
+            color: #747474;
+            &:hover {
+                color: #76bd1d;
+            }
+            &:after {
+                font-size: 12px;
+                padding-left: 5px;
+                content: '>';
+            }
+        }
+    }
+
+    .subscribe-box {
+        padding: 28px 28px 27px 31px;
+        border-left: 3px solid #76bd1d;
+        background: #f0f5fd;
+        margin: 0 0 84px;
+        h2 {
+            margin: 0 0 7px;
+            font-size: 18px;
+            line-height: 20px;
+            font-weight: normal;
+        }
+        a {
+            float: right
+        }
+        p {
+            margin: 0;
+        }
+    }
+    .about {
+        .title {
+            display: table;
+            h2 {                   
+                line-height: 27px;
+                float: left;
+                padding: 0 8px 0 0;
+                font-size: 18px;
+                white-space: pre;
+                font-weight: normal;
+            }
+            .sep-container {
+                display: table-cell;
+                vertical-align: middle;
+                width: 100%;
+                position: relative;
+                height: 6px;
+                .sep {
+                    display: block;
+                    border-top: 1px solid #e0dede;
+                    border-bottom: 1px solid #e0dede;
+                    width: 100%;
+                    position: relative;
+                    height: 6px;
+                }
+            }
+        }
+        .image {
+            position: relative;
+            display: inline-block;
+            max-width: 100%;
+            float: left;
+            img {
+                vertical-align: top;
+            }
+            .image-shadow {
+                background: url(/assets/images/imageframe_shadow.png) no-repeat;
+                height: 22px;
+                width: 230px;
+                display: inline-block;
+                position: absolute;
+                bottom: -22px;
+                &.left {
+                    background-position: top left;
+                    left: 0;
+                }
+                &.right {
+                    background-position: top right;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+}
+
+.row {
+    .col-1-2 {
+        width: 48%;
+        margin: 0;
+        float: left;
+        &:first-child {
+            margin: 0 4% 0 0;
+        }
+    }
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
 }
 

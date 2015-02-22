@@ -2,7 +2,7 @@
     margin: 0 auto;
     position: relative; /* required */
     width: 100%;
-    max-height: 450px;
+    height: 450px;
     overflow: hidden;
     border-top: 1px solid #d2d3d4;
     border-bottom: 1px solid #d2d3d4;
@@ -11,6 +11,12 @@
     -o-transition-duration: 0.25s;
     -ms-transition-duration: 0.25s;
     transition-duration: 0.25s;
+    @media (max-width:768px) {
+    	height: 350px;
+    }
+    @media (max-width:480px) {
+    	height: 250px;
+    }
     .sequence-button {
         z-index: 10;
         -webkit-user-select: none;
@@ -115,13 +121,11 @@
 .slide-3,
 .slide-4 {
     color: white;
-    width: 100%;
     left: 0;
     opacity: 0;
     width: 100%;
     height: 100%;
-    visibility: inherit;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #fff;
     background-size: cover;
     background-position: 50% 0%;
     background-repeat: no-repeat;
@@ -189,16 +193,16 @@
 
 .animate-in {
     .slide-1-text-1 {
-        top: 65px;
+        top: 16%;
     }
      .slide-1-text-2 {
-        top: 145px;
+        top: 36%;
     }
     .slide-1-text-3 {
-        top: 204px;
+        top: 51%;
     }
     .slide-1-text-4 {
-        top: 331px;
+        top: 83%;
     }
 }
 
