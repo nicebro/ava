@@ -70,3 +70,29 @@
         }
     }
 }
+
+#header.sticky #nav {
+    z-index: 999;
+    > ul > li {
+        padding: 0 20px 0 0;
+    }
+    > ul > li > a {
+        height: 63px;
+        line-height: 63px;
+        padding: 3px 0 0 0;
+        &:hover {
+            color: #76bd1d;
+            border-top: 3px solid #76bd1d;
+            padding: 0;
+        }
+    }
+
+    ul ul {
+        top:65px;
+    }
+
+    ul ul ul {
+        top: -3px;
+         z-index: 999;
+    }
+}

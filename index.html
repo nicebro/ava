@@ -30,7 +30,7 @@
 				<div class="pull-right">(919) 251-6008</div>
 			</div>
 		</div>
-		<div id="header">
+		<div id="header" class="row">
 			<div class="container">
 				<div class="logo">
 					<a href="#"><img src="assets/images/logo.png" alt="The Noble Law Firm" class="normal_logo"></a>
@@ -208,25 +208,44 @@
                     <div class="block subscribe">
                         <h3>Subscribe to our blog</h3>
                         <form action="#" method="post" target="popupwindow">
-                        <div class="input-group">
-                            <label>Email Subscription</label>
-                            <input type="text" placeholder="Your email here" value="" name="email">
-                            <input type="submit" class="button default" value="Subscribe">    
-                        </div>
+                        <input type="text" placeholder="Your email here" value="" name="email">
+                        <input type="submit" class="button default" value="Subscribe">    
                     </form>
                     </div>
                 </div>
                 <div class="col-1-4">
                     <div class="block contact">
                         <h3>Contact</h3>
-
+						<p>308 West Rosemary Street, Suite 303 Chapel Hill, NC</p>
+						<p>T: (919) 251-6008<br>F: (919) 869-2079<br><a href="mailto:example@eample.com">Email</a></p>
+                    </div>
+                    <div class="block subscribe2">
+                    	<h3>Subscribe to our newsletter</h3>
+                    	<p class="web">Web: <a href="#">click here to subscribe</a></p>
                     </div>
                 </div>
-                <div class="col-1-4">4</div>
+                <div class="col-1-4">
+					<div class="block quick-links">
+						<h3>Quick Links</h3>
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Consultations</a></li>
+							<li><a href="#">Employment Law Resources</a></li>
+							<li><a href="#">Noble Notes</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</div>
+                </div>
             </div>
         </div>
     </div>
-    <div id="footer"></div>
+    <div id="footer">
+    	<div class="container">    		
+			<p>Copyright 2014 The Noble Law Firm, PLLC. | All Rights Reserved | Powered by <a href="#">Hummingbird Creative Group</a>  |  <a href="#">Privacy Policy</a></p>
+    	</div>
+    </div>
 <script type="text/javascript"> 
 
 var sequence = $("#sequence").sequence({
@@ -251,29 +270,21 @@ $('.accordion > dt > a').click(function() {
     } 
 });
 
-
-// $(window).resize(function() {
-// 	$('#sequence').height(Math.min.apply(Math, 
-// 		$('#sequence img').map(function() {
-// 			return this.height;
-// 		})
-// 	));
-// });
-// var total = $('#sequence img').length;
-// $('#sequence img').load(function(e) {
-// 	total--;
-// 	if (total < 1) {
-// 		$('#sequence').height(Math.min.apply(Math, 
-// 			$('#sequence img').map(function() {
-// 				return this.height;
-// 			}).get()
-// 		));
-// 	}
-// });
 $('#sequence img').each(function() {
 	$self = $(this);
 	$self.parent().css('background-image', 'url('+ $self.attr('src') +')');
 	$self.remove();
+});
+
+var $header = $('#header');
+var headerHeight = $('.header-wrapper').height();
+
+$(window).scroll(function() {
+	if ($(document).scrollTop() > headerHeight) {
+		$header.addClass('sticky');
+	} else {
+		$('#header').removeClass('sticky');
+	}
 });
 
 </script>
