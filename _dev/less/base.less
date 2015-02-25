@@ -88,6 +88,13 @@ img.responsive {
             line-height: 50px;
             padding-top: 8px;
             margin: 0;
+            @media (max-width:768px) {
+                img {
+                    max-height: 70%;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
         }
     }
 }
@@ -518,17 +525,60 @@ input[type="text"] {
 
 #sidebar {
     h3 {
-        font-size: 13px;
+        font-size: 14px;
         margin: 0 0 18px 0;
         font-weight: normal;
     }
     .row {
         margin:0 0 45px 0;
     }
-    blockquote {
+    .testimonials {
+        z-index: 0;
+        position: relative;
+        -webkit-transition-duration: 0.25s;
+        -moz-transition-duration: 0.25s;
+        -o-transition-duration: 0.25s;
+        -ms-transition-duration: 0.25s;
+        transition-duration: 0.25s;
+        ul {
+            height: 100%; 
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            display: block;
+            max-height: 100%;
+            overflow: hidden;
+            li {
+                position: absolute;
+                list-style-type: none;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                .blockquote {
+                    -webkit-transition-duration: 1.5s;
+                    -moz-transition-duration: 1.5s;
+                    -o-transition-duration: 1.5s;
+                    -ms-transition-duration: 1.5s;
+                    transition-duration: 1.5s;
+                    opacity: 0;
+                }
+                &.animate-in {
+                    .blockquote {
+                        opacity: 1;
+                    }
+                }
+                &.animate-out {
+                    .blockquote {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+    .blockquote {
         margin: 0;
         padding: 0;
-        q {
+        .quote {
             display: block;
             padding: 25px 14px 24px 24px;
             background-color: #f6f6f6;
@@ -558,6 +608,38 @@ input[type="text"] {
             display: block;
             min-height: 29px;
             padding-top: 6px;
+        }
+    }
+    .accordion {
+        z-index: 2;
+    }
+    .contact {
+        .contact-info {
+            p {
+                margin: 0;
+            }
+            .address {
+                margin: 0 0 15px 0;
+            }
+        }
+    }
+    .entries {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            a {
+                display: block;
+                border-bottom: 1px solid #e0dede;
+                color: #333333;
+                padding: 10px;
+                padding-left: 0;
+                &:before {
+                    content: '>';
+                    font-size: 10px;
+                    padding-right: 10px;
+                }
+            }
         }
     }
 }
