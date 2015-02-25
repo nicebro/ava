@@ -73,7 +73,7 @@ gulp.task('js', function() {
     .pipe(browserSync.reload({stream:true}));
 });
 
-gulp.task('watch', ['browser-sync'], function() {  
+gulp.task('watch', ['browser-sync', 'css', 'js'], function() {  
   gulp.watch(paths.dev.less + '*.less', ['css', browserSync.reload]);
   //gulp.watch(paths.dev.js + '*.js', ['scripts.js', browserSync.reload]);
   gulp.watch('*.html', browserSync.reload);
