@@ -1,6 +1,6 @@
 
 var sequence = $("#sequence").sequence({
-	//autoPlay: true,
+	autoPlay: true,
 	autoPlayDelay: 500,
 	nextButton: true,
 	prevButton: true,
@@ -41,3 +41,12 @@ $(window).scroll(function() {
 $('#open-nav').on('click', function() {
 	$(this).toggleClass('active');
 });
+
+var sequence = $(".testimonials").sequence({
+	autoPlay: true,
+	autoPlayDelay: 3000,
+}).data("sequence");
+$('.testimonials .sequence-canvas').height($('.testimonials .sequence-canvas .blockquote:first').height());
+sequence.beforeNextFrameAnimatesIn = function() {
+	$('.testimonials .sequence-canvas').height(sequence.nextFrame.find('.blockquote').height());
+}; 
