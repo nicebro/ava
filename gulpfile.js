@@ -4,26 +4,27 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
+    fileinclude = require('gulp-file-include'),
     browserSync = require('browser-sync');
 
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: "./"
+            baseDir: "./public/"
         },
         open: false,
     });
 });
 
 var paths = {  
-    'dev': {
-        'less': './_dev/less/',
-        'js': './_dev/js/'
+    'src': {
+        'less': './src/less/',
+        'js': './src/js/'
     },
     'assets': {
-        'css': './assets/css/',
-        'js': './assets/js/',
-        'fonts': './assets/fonts/',
+        'css': './public/assets/css/',
+        'js': './public/assets/js/',
+        'fonts': './public/assets/fonts/',
         'vendor': './bower_components/'
     }
 };
@@ -33,21 +34,9 @@ function catchError(error) {
     this.emit('end'); 
 }
 
-gulp.task('build', ['copy-fonts', 'copy-variables', 'styles.css', 'scripts.js']);
-
-gulp.task('copy-fonts', function() {  
-  return gulp.src(paths.assets.vendor + 'bootstrap/fonts/**')
-    .pipe(gulp.dest(paths.assets.fonts));
-});
-
-gulp.task('copy-variables', function() {  
-  return gulp.src(paths.assets.vendor + 'bootstrap/less/variables.less')
-    .pipe(gulp.dest(paths.dev.less));
-});
-
 gulp.task('css', function() {  
   return gulp.src([
-    paths.dev.less + 'styles.less',
+    paths.src.less + 'styles.less',
     paths.assets.vendor + 'normalize.css/normalize.css'
     ])
     .pipe(less()).on('error', catchError)
@@ -61,9 +50,8 @@ gulp.task('css', function() {
 gulp.task('js', function() {  
   return gulp.src([
       paths.assets.vendor + 'jquery/dist/jquery.js',
-      //paths.assets.vendor + 'bootstrap/dist/js/bootstrap.js',
       paths.assets.vendor + 'sequence/scripts/jquery.sequence.js',
-      paths.dev.js + 'scripts.js'
+      paths.src.js + 'scripts.js'
     ])
     //.pipe(concat('scripts.js'))
     .pipe(gulp.dest(paths.assets.js))
@@ -73,8 +61,17 @@ gulp.task('js', function() {
     .pipe(browserSync.reload({stream:true}));
 });
 
-gulp.task('watch', ['browser-sync', 'css', 'js'], function() {  
-  gulp.watch(paths.dev.less + '*.less', ['css', browserSync.reload]);
-  //gulp.watch(paths.dev.js + '*.js', ['scripts.js', browserSync.reload]);
-  gulp.watch('*.html', browserSync.reload);
+gulp.task('html', function() {
+  gulp.src(['html/*.html'])
+    .pipe(fileinclude({
+      prefix: '#',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest('./public/'));
+});
+
+gulp.task('watch', ['browser-sync', 'css', 'js', 'html'], function() {  
+  gulp.watch(paths.src.less + '*.less', ['css', browserSync.reload]);
+  gulp.watch(paths.src.js + '*.js', ['js', browserSync.reload]);
+  gulp.watch('html/*.html', ['html', browserSync.reload]);
 });
