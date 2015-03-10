@@ -39,46 +39,45 @@ img.responsive {
   max-width: 940px;
   padding: 0 10px 0px;
 }
-.row .col-1-2,
-.row .col-2-4,
-.row .col-3-6 {
-  width: 47%;
+.row .col-1 {
+  width: 5.58333333%;
 }
-.row .col-1-3,
-.row .col-2-6 {
-  width: 29.33333333%;
+.row .col-2 {
+  width: 14.16666667%;
 }
-.row .col-1-4 {
-  width: 20.5%;
+.row .col-3 {
+  width: 22.75%;
 }
-.row .col-1-5 {
-  width: 15.2%;
+.row .col-4 {
+  width: 31.33333333%;
 }
-.row .col-1-6 {
-  width: 11.66666667%;
+.row .col-5 {
+  width: 39.91666667%;
 }
-.row .col-2-3,
-.row .col-4-6 {
-  width: 64.66666667%;
+.row .col-6 {
+  width: 48.5%;
 }
-.row .col-2-5 {
-  width: 36.4%;
+.row .col-7 {
+  width: 57.08333333%;
 }
-.row .col-3-4 {
-  width: 73.5%;
+.row .col-8 {
+  width: 65.66666667%;
 }
-.row .col-3-5 {
-  width: 57.6%;
+.row .col-9 {
+  width: 74.25%;
 }
-.row .col-4-5 {
-  width: 78.8%;
+.row .col-10 {
+  width: 82.83333333%;
 }
-.row .col-5-6 {
-  width: 82.33333333%;
+.row .col-11 {
+  width: 91.41666667%;
+}
+.row .col-12 {
+  width: 100%;
 }
 .row [class^="col-"] {
   float: left;
-  margin-right: 6%;
+  margin-right: 3%;
 }
 .row [class^="col-"]:last-child {
   margin: 0;
@@ -638,9 +637,6 @@ input[type="text"] {
   margin: 0 0 18px 0;
   font-weight: normal;
 }
-#sidebar .row {
-  margin: 0 0 45px 0;
-}
 #sidebar .testimonials {
   z-index: 0;
   position: relative;
@@ -650,6 +646,7 @@ input[type="text"] {
   -ms-transition-duration: 0.25s;
   transition-duration: 0.25s;
   overflow: hidden;
+  margin-bottom: 45px;
 }
 #sidebar .testimonials ul {
   height: 100%;
@@ -684,6 +681,7 @@ input[type="text"] {
 #sidebar .blockquote {
   margin: 0;
   padding: 0;
+  margin-bottom: 45px;
 }
 #sidebar .blockquote .quote {
   display: block;
@@ -716,14 +714,21 @@ input[type="text"] {
   min-height: 29px;
   padding-top: 6px;
 }
-#sidebar .accordion {
+#sidebar #accordion {
   z-index: 2;
+  margin-bottom: 45px;
+}
+#sidebar .contact {
+  margin-bottom: 45px;
 }
 #sidebar .contact .contact-info p {
   margin: 0;
 }
 #sidebar .contact .contact-info .address {
   margin: 0 0 15px 0;
+}
+#sidebar .entries {
+  margin-bottom: 45px;
 }
 #sidebar .entries ul {
   list-style: none;
@@ -1090,4 +1095,34 @@ input[type="text"] {
 .pagination .pagination-next {
   margin-left: 8px;
   font-size: 12px;
+}
+#contacts input {
+  border: 1px solid #d2d2d2;
+  width: 28%;
+  font-size: 13px;
+  color: #747474;
+  -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  padding: 8px 2%;
+  float: left;
+  margin-right: 1%;
+  margin-bottom: 13px;
+}
+#contacts textarea {
+  border: 1px solid #d2d2d2;
+  width: 96%;
+  height: 150px;
+  font-size: 13px;
+  color: #747474;
+  -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  padding: 8px 11px;
+  margin-bottom: 13px;
+}
+#contacts .button {
+  text-shadow: 0 1px 0 #fff;
+  padding: 0 20px;
+  color: #54770f;
 }

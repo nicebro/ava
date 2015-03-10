@@ -36,8 +36,8 @@ function catchError(error) {
 
 gulp.task('css', function() {  
   return gulp.src([
-    paths.src.less + 'styles.less',
-    paths.assets.vendor + 'normalize.css/normalize.css'
+    	paths.src.less + 'styles.less',
+    	paths.assets.vendor + 'normalize.css/normalize.css'
     ])
     .pipe(less()).on('error', catchError)
     .pipe(gulp.dest(paths.assets.css)) 
@@ -73,5 +73,5 @@ gulp.task('html', function() {
 gulp.task('watch', ['browser-sync', 'css', 'js', 'html'], function() {  
   gulp.watch(paths.src.less + '*.less', ['css', browserSync.reload]);
   gulp.watch(paths.src.js + '*.js', ['js', browserSync.reload]);
-  gulp.watch('html/*.html', ['html', browserSync.reload]);
+  gulp.watch('html/**/*.html', ['html', browserSync.reload]);
 });

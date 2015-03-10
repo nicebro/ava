@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+		<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -17,11 +17,12 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.sequence.min.js"></script>
 	</head>
 <body>
-
 <div id="wrapper">
-	<div class="header-wrapper">
+		<div class="header-wrapper">
 		<div class="top-header">
 			<div class="container">
 				<div class="pull-left"><em>Trusted Employment Law Counsel</em></div>
@@ -30,82 +31,80 @@
 		</div>
 		<div id="header" class="row">
 			<div class="container">
-				<div class="row">
-					<div class="col-1-6">
-						<div class="logo">
-							<a href="#"><img src="assets/images/logo.png" alt="The Noble Law Firm" class="normal_logo"></a>
-						</div>
-					</div>
-					<div class="col-5-6">
-						<div id="open-nav">&#9776;</div>
-						<div id="nav">
-							<ul>
-								<li><a href="http://thenoblelaw.com/">Home</a>
-								</li>
-								<li class="dropdown"><a href="http://thenoblelaw.com/labor-and-employment-law-firm-chapel-hill-nc/">About</a>
-									<ul>
-										<li><a href="http://thenoblelaw.com/employment-law-attorneys/">Team</a></li>
-										<li><a href="http://thenoblelaw.com/testimonials/">Testimonials</a></li>
-										<li><a href="http://thenoblelaw.com/labor-and-employment-law-firm-chapel-hill-nc/videos/">Videos</a></li>
-										<li><a href="http://thenoblelaw.com/privacy-policy/">Privacy Policy</a></li>
-									</ul>
-								</li>
-								<li class="dropdown"><a href="http://thenoblelaw.com/services/">Services</a>
-									<ul>
-										<li class="dropdown"><a href="http://thenoblelaw.com/services/employee-rights/">For Employees</a>
-											<ul>
-											<li><a href="http://thenoblelaw.com/services/employee-rights/employment-contracts/">Counseling New &amp; Departing Employees</a></li>
-											<li><a href="http://thenoblelaw.com/services/employee-rights/employment-discrimination/">Employment Discrimination</a></li>
-											<li><a href="http://thenoblelaw.com/services/employee-rights/sexual-harassment/">Sexual Harassment</a></li>
-											<li><a href="http://thenoblelaw.com/services/employee-rights/wrongful-discharge/">Wrongful Discharge</a></li>
-											<li><a href="http://thenoblelaw.com/services/employee-rights/family-and-medical-leave/">Family and Medical Leave</a></li>
-											<li><a href="http://thenoblelaw.com/services/employee-rights/negligent-hiring-and-retention/">Negligent Hiring and Retention</a></li>
-											<li><a href="http://thenoblelaw.com/services/employee-rights/retaliation/">Retaliation</a></li>
-											<li><a href="http://thenoblelaw.com/services/employee-rights/wage-and-hour-disputes/">Wage and Hour Disputes</a></li>
-											<li><a href="http://thenoblelaw.com/services/employee-rights/libel-and-defamation/">Defamation (Libel &amp; Slander)</a></li>
-											<li><a href="http://thenoblelaw.com/services/employee-rights/whistleblower-rights/">Whistleblower Rights</a></li>
-											<li><a href="http://thenoblelaw.com/services/employee-rights/non-compete-agreements/">Non-Compete Agreements</a></li>
-											</ul></li>
-										<li class="dropdown"><a href="http://thenoblelaw.com/employment-practices-audit/">For Employers</a>
-											<ul>
-											<li><a href="http://thenoblelaw.com/employment-practices-audit/employment-practices-program/">Employment Practices Program</a></li>
-											<li><a href="http://thenoblelaw.com/employment-practices-audit/best-practices-systems/">Improve and Control Employment Systems</a></li>
-											<li><a href="http://thenoblelaw.com/employment-practices-audit/business-litigation/">Business Tort Litigation</a></li>
-											</ul></li>
-									</ul>
-								</li>
-								<li><a href="http://thenoblelaw.com/employment-legal-advice-nc/">Consultations</a>
-								</li>
-								<li><a href="http://thenoblelaw.com/labor-and-employment-law-resources/">Employment Law Resources</a>
-								</li>
-								<li class="dropdown"><a href="http://thenoblelaw.com/employment-law-blog/">Noble Notes</a>
-									<ul>
-										<li><a href="http://thenoblelaw.com/noble-notes-for-employees/">Noble Notes for Employees</a></li>
-										<li><a href="http://thenoblelaw.com/noble-notes-for-employers/">Noble Notes for Employers</a></li>
-										<li><a href="http://thenoblelaw.com/employment-law-blog/news/">News</a></li>
-									</ul>
-								</li>
-								<li><a href="http://thenoblelaw.com/contact-noble-law-firm/">Contact</a>
-								</li>
-							</ul>
-						</div> <!-- #nav -->
+				<div class="col-2">
+					<div class="logo">
+						<a href="#"><img src="assets/images/logo.png" alt="The Noble Law Firm" class="normal_logo"></a>
 					</div>
 				</div>
-			</div>	
+				<div class="col-10">
+					<div id="open-nav">&#9776;</div>
+					<div id="nav">
+						<ul>
+							<li><a href="#">Home</a>
+							</li>
+							<li class="dropdown"><a href="#">About</a>
+								<ul>
+									<li><a href="#">Team</a></li>
+									<li><a href="#">Testimonials</a></li>
+									<li><a href="#">Videos</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+								</ul>
+							</li>
+							<li class="dropdown"><a href="#">Services</a>
+								<ul>
+									<li class="dropdown"><a href="#">For Employees</a>
+										<ul>
+										<li><a href="#">Counseling New &amp; Departing Employees</a></li>
+										<li><a href="#">Employment Discrimination</a></li>
+										<li><a href="#">Sexual Harassment</a></li>
+										<li><a href="#">Wrongful Discharge</a></li>
+										<li><a href="#">Family and Medical Leave</a></li>
+										<li><a href="#">Negligent Hiring and Retention</a></li>
+										<li><a href="#">Retaliation</a></li>
+										<li><a href="#">Wage and Hour Disputes</a></li>
+										<li><a href="#">Defamation (Libel &amp; Slander)</a></li>
+										<li><a href="#">Whistleblower Rights</a></li>
+										<li><a href="#">Non-Compete Agreements</a></li>
+										</ul></li>
+									<li class="dropdown"><a href="#">For Employers</a>
+										<ul>
+										<li><a href="#">Employment Practices Program</a></li>
+										<li><a href="#">Improve and Control Employment Systems</a></li>
+										<li><a href="#">Business Tort Litigation</a></li>
+										</ul></li>
+								</ul>
+							</li>
+							<li><a href="#">Consultations</a>
+							</li>
+							<li><a href="#">Employment Law Resources</a>
+							</li>
+							<li class="dropdown"><a href="#">Noble Notes</a>
+								<ul>
+									<li><a href="#">Noble Notes for Employees</a></li>
+									<li><a href="#">Noble Notes for Employers</a></li>
+									<li><a href="#">News</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Contact</a>
+							</li>
+						</ul>
+					</div> <!-- #nav -->
+				</div>
+			</div>  
 		</div>
 	</div>
-	<div id="content-title">
+		<div id="content-title">
 		<div class="container">
 			<div class="row">
-				<div class="col-1-2">
+				<div class="col-6">
 					<div class="entry-title">
-						<h1>Blog</h1>
+						<h1>Contact</h1>
 					</div>
 				</div>
-				<div class="col-1-2">
+				<div class="col-6">
 					<div class="breadcrumbs">
 						<ul>
-							<li><a href="#">Home</a></li>
+							<li><a href="http://thenoblelaw.com">Home</a></li>
 							<li>Contact</li>
 						</ul>
 					</div>
@@ -113,32 +112,28 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="container">
-		<div class="row">
-			<div id="content">	
-				<div id="page-content" class="col-3-4">
-					<div class="article-content">
-						<h2 class="article-title">Employer Liable to Victim Spouse for Adulterous Relationship Between Employees?</h2>
-						<div class="excerpt-container"><p>You might be thinking, “Whoa! Seriously?”</p>
-						<p>Seriously.</p>
-						<p>While no reported cases to date have actually found an employer vicariously liable to a scorned spouse for the adulterous relationship between the cheating spouse and a coworker, the North Carolina Court of Appeals has left that possibility open.</p>
-						<p>North Carolina is one of few states that still recognize common law alienation of affection claims. […]</p>
-						</div>
-						<div class="article-footer">
-							<span class="updated_at">March 8th, 2015</span>
-							<a href="#">Read More ></a>
-						</div>
-					</div>
-					<div class="pagination">
-						<a class="pagination-prev" href="#">&lt; Previous</a>
-						<a href="#" class="inactive">1</a>
-						<span class="current">2</span>
-						<a href="#" class="inactive">3</a>
-						<a class="pagination-next" href="#">Next &gt;</a>
+		<div id="content">
+			<div class="row">
+				<div class="col-9">
+					<div id="page-content">
+						
+<h1>Contact</h1>
+
+<div id="contacts">
+	<input type="text" name="contact_name" id="author" value="" placeholder="Name (required)" size="22" tabindex="1" aria-required="true" class="input-name">
+	<input type="text" name="email" id="email" value="" placeholder="Email (required)" size="22" tabindex="2" aria-required="true" class="input-email">
+	<input type="text" name="url" id="url" value="" placeholder="Subject" size="22" tabindex="3" class="input-website">
+	<textarea name="msg" id="contact" cols="39" rows="4" tabindex="4" class="textarea-comment" placeholder="Message"></textarea>
+	<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Form" class="button large default">
+</div>
+</form>
 					</div>
 				</div>
-				<div id="sidebar" class="col-1-4">
-					<div class="row testimonials">
+				<div class="col-3">
+					<div id="sidebar">
+											<div class="testimonials">
 						<h3>Testimonials</h3>
 						<ul class="sequence-canvas">
 							<li class="animate-in">
@@ -146,19 +141,19 @@
 							</li>
 							<li>
 								<div class="blockquote"><span class="quote">“I was very happy with how the intake was done so professionally: everyone was receptive, the process was well defined, and I was told who would be working with me. Nick was straight to the point, never wasted any time. That was really helpful. He always gave me the time I needed: he didn't skimp and didn't drag his feet. I felt like I was in really good hands.  Thanks.” </span><span class="company-name"><strong>D.R.W.</strong></span></div>
-							</li>                            
+							</li>
 							<li>
 								<div class="blockquote"><span class="quote">“Ms. Noble is a unique blend of a rigorous and seasoned professional who approaches her work with compassion and genuine caring. She is sharp, insightful and pursues her cases with conviction. I highly recommend her services to prospective clients and I would be happy to speak with anyone that is considering engaging Laura Noble to represent them.” </span><span class="company-name"><strong>J.R.</strong></span></div>
-							</li>                            
+							</li>
 							<li>
 								<div class="blockquote"><span class="quote">“I want to express my sincere gratitude to the team at The Noble Law Firm for making me feel welcomed, respected and valued. You dealt with me ethically, kindly and professionally. Although I did not get the result I would have liked, I believe you represented me better than anyone else could have. Thank you!” </span><span class="company-name"><strong>A.P.</strong></span></div>
-							</li>                            
+							</li>
 							<li>
 								<div class="blockquote"><span class="quote">“Nick and Laura worked hard and believed in us when no one else would. They gave us amazing guidance and were always on our side. They think outside the box and are very creative.” </span><span class="company-name"><strong>A.R.</strong></span></div>
-							</li>                            
+							</li>
 							<li>								
 								<div class="blockquote"><span class="quote">”As a smaller employer, I appreciate the efficiency with which The Noble Law Firm provided advice to our business and resolved a time-sensitive issue.&nbsp; I highly recommend them as effective legal counsel for any employer.”</span><span class="company-name"><strong>J.D.</strong></span></div>
-							</li>                            
+							</li>
 							<li>
 								<div class="blockquote"><span class="quote">"Laura took me on at the last minute. I appreciated it! She was very professional, and I was happy with the outcome. She is very smart and very kind.” </span><span class="company-name"><strong>G.K.</strong></span></div>
 							</li>
@@ -173,7 +168,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="row accordion">
+					<div id="accordion">
 						<h3>About The Noble Law Firm</h3>
 						<dl class="accordion">
 							<dt><a href="">Our Company Mission</a></dt>
@@ -193,17 +188,17 @@
 							</dd>
 						</dl>
 					</div>
-					<div class="row contact">
-						<h3>The Noble Law Firm</h3>     
+					<div class="contact">
+						<h3>The Noble Law Firm</h3>
 						<div class="contact-info">
-						    <p class="address">308 West Rosemary Street<br>Suite 303<br>Chapel Hill, NC</p>
-						    <p class="phone">Phone: (919) 251-6008</p>
-						    <p class="fax">Fax: (919) 869-2079</p>
-						    <p class="email">Email: <a href="mailto:rdeveau@thenoblelaw.com">Email</a></p>
-						    <p class="web">Web: <a href="http://www.thenoblelaw.com">www.thenoblelaw.com</a></p>
+							<p class="address">308 West Rosemary Street<br>Suite 303<br>Chapel Hill, NC</p>
+							<p class="phone">Phone: (919) 251-6008</p>
+							<p class="fax">Fax: (919) 869-2079</p>
+							<p class="email">Email: <a href="mailto:rdeveau@thenoblelaw.com">Email</a></p>
+							<p class="web">Web: <a href="http://www.thenoblelaw.com">www.thenoblelaw.com</a></p>
 						</div>
 					</div>
-					<div class="row entries">
+					<div class="entries">
 						<h3>Recent Posts</h3>
 						<ul>
 							<li><a href="#">Color Discrimination in the Absence of Race Discrimination</a></li>
@@ -214,13 +209,15 @@
 						</ul>
 					</div>
 				</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div id="pre-footer">
+		<div id="pre-footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-1-4">
+				<div class="col-3">
 					<div class="block disclaimer">
 						<h3>Disclaimer</h3>
 						<p><em>The information provided on this website does not constitute legal advice or otherwise create an attorney-client relationship.</em></p>
@@ -233,7 +230,7 @@
 						<a class="linkedin" href="#" target="blank" data-tooltip="LinkedIn"></a>
 					</div>
 				</div>
-				<div class="col-1-4">
+				<div class="col-3">
 					<div class="block blog">
 						<h3>The Noble Notes Blog</h3>
 						<ul>
@@ -251,7 +248,7 @@
 					</form>
 					</div>
 				</div>
-				<div class="col-1-4">
+				<div class="col-3">
 					<div class="block contact">
 						<h3>Contact</h3>
 						<p>308 West Rosemary Street, Suite 303 Chapel Hill, NC</p>
@@ -262,7 +259,7 @@
 						<p class="web">Web: <a href="#">click here to subscribe</a></p>
 					</div>
 				</div>
-				<div class="col-1-4">
+				<div class="col-3">
 					<div class="block quick-links">
 						<h3>Quick Links</h3>
 						<ul>
@@ -284,11 +281,8 @@
 			<p>Copyright 2014 The Noble Law Firm, PLLC. | All Rights Reserved | Powered by <a href="#">Hummingbird Creative Group</a>  |  <a href="#">Privacy Policy</a></p>
 		</div>
 	</div>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.sequence.min.js"></script>
-<script type="text/javascript" src="/assets/js/scripts.js"></script>
-
 </div>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
 
 </body>
 </html>
