@@ -13,7 +13,7 @@ $('.accordion > dt > a').click(function() {
 
 var sequence = $("#sequence").sequence({
 	autoPlay: true,
-	autoPlayDelay: 500,
+	autoPlayDelay: 3000,
 	nextButton: true,
 	prevButton: true,
 }).data("sequence");
@@ -41,6 +41,7 @@ $('#open-nav').on('click', function() {
 });
 
 var sequence = $(".testimonials").sequence({
+	autoPlay: true,
 	autoPlayDelay: 3000,
 }).data("sequence");
 $('.testimonials .sequence-canvas').height($('.testimonials .sequence-canvas .blockquote:first').height());

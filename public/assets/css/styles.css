@@ -40,44 +40,44 @@ img.responsive {
   padding: 0 10px 0px;
 }
 .row .col-1 {
-  width: 5.58333333%;
+  width: 3.75%;
 }
 .row .col-2 {
-  width: 14.16666667%;
+  width: 12.5%;
 }
 .row .col-3 {
-  width: 22.75%;
+  width: 21.25%;
 }
 .row .col-4 {
-  width: 31.33333333%;
+  width: 30%;
 }
 .row .col-5 {
-  width: 39.91666667%;
+  width: 38.75%;
 }
 .row .col-6 {
-  width: 48.5%;
+  width: 47.5%;
 }
 .row .col-7 {
-  width: 57.08333333%;
+  width: 56.25%;
 }
 .row .col-8 {
-  width: 65.66666667%;
+  width: 65%;
 }
 .row .col-9 {
-  width: 74.25%;
+  width: 73.75%;
 }
 .row .col-10 {
-  width: 82.83333333%;
+  width: 82.5%;
 }
 .row .col-11 {
-  width: 91.41666667%;
+  width: 91.25%;
 }
 .row .col-12 {
   width: 100%;
 }
 .row [class^="col-"] {
   float: left;
-  margin-right: 3%;
+  margin-right: 5%;
 }
 .row [class^="col-"]:last-child {
   margin: 0;
@@ -1031,7 +1031,10 @@ input[type="text"] {
   margin: 0;
   padding: 0 0 15px 0;
 }
-.article-title {
+.article-content {
+  margin-bottom: 50px;
+}
+.article-content h2 {
   font-size: 18px;
   margin: 0 0 25px 0;
   padding: 0;
