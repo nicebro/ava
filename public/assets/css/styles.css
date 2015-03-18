@@ -13,6 +13,9 @@ a {
 a:hover {
   color: #76bd1d;
 }
+.form {
+  margin: 25px 0;
+}
 img.responsive {
   border-style: none;
   vertical-align: top;
@@ -1128,4 +1131,20 @@ input[type="text"] {
   text-shadow: 0 1px 0 #fff;
   padding: 0 20px;
   color: #54770f;
+}
+.alert {
+  padding: 8px;
+  text-align: center;
+  position: relative;
+  margin: 10px 0;
+}
+.alert.error {
+  background: #ffe9e9;
+  border: 1px solid #e7a9a9;
+  color: #d04544;
+}
+.alert.success {
+  background: #EEFFE9;
+  border: 1px solid #BAE7A9;
+  color: #44D056;
 }
