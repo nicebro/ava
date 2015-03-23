@@ -640,6 +640,9 @@ input[type="text"] {
   margin: 0 0 18px 0;
   font-weight: normal;
 }
+#sidebar > div {
+  margin-bottom: 45px;
+}
 #sidebar .testimonials {
   z-index: 0;
   position: relative;
@@ -649,7 +652,6 @@ input[type="text"] {
   -ms-transition-duration: 0.25s;
   transition-duration: 0.25s;
   overflow: hidden;
-  margin-bottom: 45px;
 }
 #sidebar .testimonials ul {
   height: 100%;
@@ -716,6 +718,16 @@ input[type="text"] {
   display: block;
   min-height: 29px;
   padding-top: 6px;
+}
+#sidebar .subscribe input[type="text"] {
+  margin: 0 0 5px 0;
+  padding: 4px 6px;
+  width: 100%;
+}
+#sidebar .subscribe .button {
+  padding: 6px 10px;
+  font-weight: bold;
+  font-size: 11px;
 }
 #sidebar #accordion {
   z-index: 2;
