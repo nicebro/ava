@@ -40,11 +40,17 @@ $('#open-nav').on('click', function() {
 	$(this).toggleClass('active');
 });
 
-var sequence = $(".testimonials").sequence({
-	autoPlay: true,
-	autoPlayDelay: 3000,
-}).data("sequence");
-$('.testimonials .sequence-canvas').height($('.testimonials .sequence-canvas .blockquote:first').height());
-sequence.beforeNextFrameAnimatesIn = function() {
-	$('.testimonials .sequence-canvas').height(sequence.nextFrame.find('.blockquote').height());
-}; 
+if ($(".testimonials").length) {
+	var sequence = $(".testimonials").sequence({
+		autoPlay: true,
+		autoPlayDelay: 3000,
+	}).data("sequence");
+
+	$('.testimonials .sequence-canvas').height($('.testimonials .sequence-canvas .blockquote:first').height());
+
+	sequence.beforeNextFrameAnimatesIn = function() {
+		$('.testimonials .sequence-canvas').height(sequence.nextFrame.find('.blockquote').height());
+	}; 
+}
+
+$('.alert').fadeIn('slow').delay(6000).fadeOut('slow');
